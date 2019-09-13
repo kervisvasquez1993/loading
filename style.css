@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+.loading-body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #000;
+
+}
+.loading-h2{
+	position: relative;
+	font-size: 8rem;
+	color: #222;
+	text-transform: uppercase;
+	border-bottom: 16px solid #222;
+	letter-spacing: 0.05em;
+}
+.loading-h2:before{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #03a9f4;
+	overflow: hidden;
+	border-bottom: 16px solid #03a9f4;
+	animation: animate 10s linear infinite
+
+}
+@keyframes animate{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%
+	}
+}
